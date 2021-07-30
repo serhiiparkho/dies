@@ -16,14 +16,14 @@
     justify-content: center;
     align-items: center;
 }
-[class*="die"]{
+[class^="die"]{
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     background-color: rgb(230, 141, 40);
-    margin: 20px;
-    padding: 10px;
+    margin: 10px;
+    padding: 5px;
     flex-wrap: wrap;
 }
 .die-1{
@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-[class*="col"]{
+[class^="col"]{
     display: flex;
 }
 .die-2 > .col-right,
@@ -57,8 +57,16 @@
     justify-content: center;
 }
 .dot{
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
     background-color: black;
+}
+
+@media (max-width: 1080px){
+    .table{
+        flex-direction: column;
+        height: 70vh;
+        width: 50vw;
+    }
 }
